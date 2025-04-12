@@ -2,6 +2,8 @@
 
 A simple browser extension that helps you quickly copy the title and URL of the current webpage with just one click. Perfect for sharing links or saving webpages for later reference.
 
+![QuickShare Extension Screenshot](../../../resources/screenshots/QuickShare%20Extension.png)
+
 ## Features
 
 - One-click copy of page title and URL

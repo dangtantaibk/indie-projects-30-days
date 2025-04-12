@@ -8,7 +8,7 @@ Welcome to my **30-Day Indie Projects Challenge**, where each day I build and la
 
 | Day | Project Name | Tech Stack | Complexity | Status |
 |-----|--------------|------------|------------|--------|
-| 01  | QuickShare Extension & Quick Color Palette | JavaScript, Chrome API | Simple | ⏳ Upcoming |
+| 01  | QuickShare Extension & Quick Color Palette | JavaScript, Chrome API | Simple | ✅ Done |
 | 02  | Gistify CLI & Daily Habit Tracker | Python, GitHub API | Simple | ⏳ Upcoming |
 | 03  | Quotify & Markdown to HTML | JavaScript | Simple | ⏳ Upcoming |
 | 04  | SplitEZ & Basic Unit Converter | React | Simple | ⏳ Upcoming |
@@ -43,9 +43,9 @@ Welcome to my **30-Day Indie Projects Challenge**, where each day I build and la
 
 ## 📸 Highlights & Demos
 
-| QuickShare Extension | Gistify CLI |
+| [QuickShare Extension](projects/01/quickshare-extension/README.md) | [Quick Color Palette Generator](projects/01/quick-color-palette/README.md) |
 |---|---|
-| ![QuickShare Demo](resources/demo-gifs/quickshare.gif) | ![Gistify CLI Demo](resources/demo-gifs/gistify.gif) |
+| ![QuickShare Extension](resources/screenshots/QuickShare%20Extension.png) | ![Quick Color Palette Generator](resources/screenshots/Quick%20Color%20Palette%20Generator.png) |
 
 ---
 

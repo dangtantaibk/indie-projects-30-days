@@ -2,6 +2,8 @@
 
 A simple and convenient web application that allows users to create random color palettes or generate harmonious colors based on a base color. Perfect for designers and developers who need to quickly find harmonious color combinations.
 
+![Quick Color Palette Screenshot](../../../resources/screenshots/Quick%20Color%20Palette%20Generator.png)
+
 ## ✨ Features
 
 - 🎲 Generate random color palettes

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>QuickShare</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>QuickShare</h1>
+    <div class="format-buttons">
+      <button id="copyPlain" class="btn" title="Copy as 'Title - URL' (⌘⇧1)">
+        <span class="btn-text">Text</span>
+      </button>
+      <button id="copyMarkdown" class="btn" title="Copy as markdown link (⌘⇧2)">
+        <span class="btn-text">Markdown</span>
+      </button>
+      <button id="copyHTML" class="btn" title="Copy as HTML link (⌘⇧3)">
+        <span class="btn-text">HTML</span>
+      </button>
+    </div>
+    <div id="message" class="message"></div>
+    <div class="shortcut-hint">
+      Press ⌘⇧1/2/3 for quick copy
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

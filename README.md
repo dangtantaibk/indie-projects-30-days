@@ -9,7 +9,7 @@ Welcome to my **30-Day Indie Projects Challenge**, where each day I build and la
 | Day | Project Name | Tech Stack | Complexity | Status |
 |-----|--------------|------------|------------|--------|
 | 01  | QuickShare Extension & Quick Color Palette | JavaScript, Chrome API | Simple | ✅ Done |
-| 02  | Gistify CLI & Daily Habit Tracker | Python, GitHub API | Simple | ⏳ Upcoming |
+| 02  | Gistify CLI & Daily Habit Tracker | Python, GitHub API | Simple |  ✅ Done |
 | 03  | Quotify & Markdown to HTML | JavaScript | Simple | ⏳ Upcoming |
 | 04  | SplitEZ & Basic Unit Converter | React | Simple | ⏳ Upcoming |
 | 05  | PantryChef & Random Quote Generator | React, Node.js | Simple | ⏳ Upcoming |

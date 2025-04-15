@@ -1,0 +1,39 @@
+{
+  "name": "gistify",
+  "version": "1.0.0",
+  "description": "A command-line tool for creating, managing and sharing code snippets through GitHub Gists",
+  "main": "dist/index.js",
+  "bin": {
+    "gistify": "./dist/index.js"
+  },
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rm -rf dist",
+    "rebuild": "npm run clean && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "gist",
+    "github",
+    "code-snippets"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@types/prompts": "^2.4.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@octokit/rest": "^20.0.2",
+    "commander": "^12.0.0",
+    "dotenv": "^16.4.5",
+    "ora": "^5.4.1",
+    "prompts": "^2.4.2"
+  }
+}

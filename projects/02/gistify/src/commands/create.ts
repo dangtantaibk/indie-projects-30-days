@@ -41,23 +41,43 @@ Examples:
                 'Reading files...'
             );
 
-            const gist = await withSpinner(
-                async () => github.createGist(
-                    gistFiles,
-                    options.description || '',
-                    !options.private
-                ),
-                'Creating gist...',
-                'Gist created successfully! 🎉'
-            );
+            let gist;
+            try {
+                gist = await withSpinner(
+                    async () => github.createGist(
+                        gistFiles,
+                        options.description || '',
+                        !options.private
+                    ),
+                    'Creating gist...',
+                    'Gist created successfully! 🎉'
+                );
 
-            console.log(`\nDescription: ${gist.description || '(no description)'}`);
-            console.log(`URL: ${gist.html_url}`);
-            console.log('\nFiles:');
-            if (gist.files) {
-                Object.keys(gist.files).forEach(filename => {
-                    console.log(`  - ${filename}`);
-                });
+                console.log(`\nDescription: ${gist.description || '(no description)'}`);
+                console.log(`URL: ${gist.html_url}`);
+                console.log('\nFiles:');
+                if (gist.files) {
+                    Object.keys(gist.files).forEach(filename => {
+                        console.log(`  - ${filename}`);
+                    });
+                }
+            } catch (apiError) {
+                console.error('\nError creating gist!');
+                
+                if (apiError instanceof Error && apiError.message.includes('Not Found')) {
+                    console.error('\nPossible causes:');
+                    console.error('  1. Your GitHub token may be invalid or expired');
+                    console.error('  2. Your token may not have the "gist" scope permission');
+                    console.error('  3. There may be network connectivity issues\n');
+                    console.error('Troubleshooting steps:');
+                    console.error('  1. Check your GITHUB_TOKEN in .env file');
+                    console.error('  2. Generate a new token at https://github.com/settings/tokens');
+                    console.error('     Make sure to select the "gist" scope permission');
+                    console.error('  3. Check your internet connection');
+                } else {
+                    console.error('\n', apiError instanceof Error ? apiError.message : 'Unknown error occurred');
+                }
+                process.exit(1);
             }
         } catch (error) {
             if (error instanceof Error) {

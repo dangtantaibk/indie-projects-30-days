@@ -26,17 +26,23 @@ Examples:
             console.log(`ID: ${gist.id}`);
             console.log(`Description: ${gist.description || '(no description)'}`);
             console.log(`URL: ${gist.html_url}`);
-            console.log(`Created: ${new Date(gist.created_at).toLocaleString()}`);
-            console.log(`Updated: ${new Date(gist.updated_at).toLocaleString()}`);
+            console.log(`Created: ${gist.created_at ? new Date(gist.created_at).toLocaleString() : 'N/A'}`);
+            console.log(`Updated: ${gist.updated_at ? new Date(gist.updated_at).toLocaleString() : 'N/A'}`);
             console.log('\nFiles:');
             if (gist.files) {
                 Object.keys(gist.files).forEach(filename => {
-                    const file = gist.files[filename];
-                    console.log(`\n  ${filename}:`);
-                    console.log(`  Type: ${file.type}`);
-                    console.log(`  Size: ${file.size} bytes`);
-                    console.log(`  Content:`);
-                    console.log('  ' + file.content.split('\n').join('\n  '));
+                    const file = gist.files?.[filename];
+                    if (file) {
+                        console.log(`\n  ${filename}:`);
+                        console.log(`  Type: ${file.type || 'N/A'}`);
+                        console.log(`  Size: ${file.size || 0} bytes`);
+                        console.log(`  Content:`);
+                        if (file.content) {
+                            console.log('  ' + file.content.split('\n').join('\n  '));
+                        } else {
+                            console.log('  (No content available)');
+                        }
+                    }
                 });
             }
         } catch (error) {

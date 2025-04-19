@@ -1,0 +1,26 @@
+{
+  "name": "quotify",
+  "version": "1.0.0",
+  "description": "A web application to generate quote images",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "keywords": [
+    "quote",
+    "image",
+    "generator"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "buffer": "^6.0.3",
+    "parcel": "^2.9.3",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "fabric": "^5.3.0"
+  }
+}

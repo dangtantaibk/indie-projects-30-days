@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD2HTML - Markdown to HTML Converter</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-blue-600 text-white shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <h1 class="text-2xl font-bold">MD2HTML</h1>
+            <p class="text-sm">Simple Markdown to HTML Converter</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4">
+        <div class="flex flex-col md:flex-row gap-4">
+            <!-- Markdown Input Panel -->
+            <div class="w-full md:w-1/2">
+                <div class="bg-white rounded shadow p-4 h-full">
+                    <div class="flex justify-between items-center mb-2">
+                        <h2 class="text-lg font-semibold">Markdown Input</h2>
+                        <button id="clearBtn" class="px-2 py-1 bg-gray-200 rounded text-sm hover:bg-gray-300">Clear</button>
+                    </div>
+                    <textarea id="markdownInput" 
+                              class="w-full h-96 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono"
+                              placeholder="Type your Markdown here..."></textarea>
+                </div>
+            </div>
+
+            <!-- HTML Output Panel -->
+            <div class="w-full md:w-1/2">
+                <div class="bg-white rounded shadow p-4 h-full">
+                    <div class="flex justify-between items-center mb-2">
+                        <h2 class="text-lg font-semibold">HTML Output</h2>
+                        <div class="space-x-2">
+                            <button id="copyBtn" class="px-2 py-1 bg-blue-500 text-white rounded text-sm hover:bg-blue-600">Copy HTML</button>
+                            <button id="downloadBtn" class="px-2 py-1 bg-green-500 text-white rounded text-sm hover:bg-green-600">Download</button>
+                            <button id="viewSourceBtn" class="px-2 py-1 bg-gray-200 rounded text-sm hover:bg-gray-300">View Source</button>
+                        </div>
+                    </div>
+                    
+                    <!-- HTML Preview and Source Tabs -->
+                    <div class="border rounded">
+                        <div class="flex border-b">
+                            <button id="previewTab" class="py-2 px-4 font-medium bg-white active">Preview</button>
+                            <button id="sourceTab" class="py-2 px-4 font-medium bg-gray-100">Source</button>
+                        </div>
+                        
+                        <div id="previewPane" class="p-4 h-88 overflow-auto prose">
+                            <div id="htmlPreview"></div>
+                        </div>
+                        
+                        <div id="sourcePane" class="p-4 h-88 overflow-auto hidden">
+                            <pre id="htmlSource" class="bg-gray-50 p-2 font-mono text-sm"></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-200 mt-4 py-4">
+        <div class="container mx-auto px-4 text-center text-gray-600 text-sm">
+            <p>MD2HTML Converter - A simple tool for converting Markdown to HTML</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+    <script src="./src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotify - Quote Image Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-gradient-to-r from-purple-600 to-blue-500 text-white p-6 shadow-md">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-bold text-center">Quotify</h1>
+            <p class="text-center mt-2">Transform your words into beautiful images</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-6 max-w-6xl">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Controls Section -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-bold mb-4">Create Your Quote</h2>
+                
+                <form id="quote-form">
+                    <div class="mb-4">
+                        <label for="quote-text" class="block text-sm font-medium text-gray-700 mb-1">Your Quote</label>
+                        <textarea 
+                            id="quote-text" 
+                            class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                            rows="4" 
+                            placeholder="Enter your quote here..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="author" class="block text-sm font-medium text-gray-700 mb-1">Author (optional)</label>
+                        <input 
+                            type="text" 
+                            id="author" 
+                            class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="Enter author name"
+                        >
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="background-select" class="block text-sm font-medium text-gray-700 mb-1">Background</label>
+                            <select 
+                                id="background-select" 
+                                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            >
+                                <option value="color">Solid Color</option>
+                                <option value="bg1">Nature</option>
+                                <option value="bg2">Abstract</option>
+                                <option value="bg3">Gradient</option>
+                                <option value="bg4">Minimalist</option>
+                            </select>
+                        </div>
+
+                        <div id="color-picker-container" class="color-picker-container">
+                            <label for="background-color" class="block text-sm font-medium text-gray-700 mb-1">Background Color</label>
+                            <input 
+                                type="color" 
+                                id="background-color" 
+                                class="w-full p-1 h-12 border border-gray-300 rounded-md"
+                                value="#f3f4f6"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="font-select" class="block text-sm font-medium text-gray-700 mb-1">Font Style</label>
+                            <select 
+                                id="font-select" 
+                                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            >
+                                <option value="'Roboto', sans-serif">Roboto</option>
+                                <option value="'Playfair Display', serif">Playfair</option>
+                                <option value="'Dancing Script', cursive">Dancing Script</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="font-color" class="block text-sm font-medium text-gray-700 mb-1">Font Color</label>
+                            <input 
+                                type="color" 
+                                id="font-color" 
+                                class="w-full p-1 h-12 border border-gray-300 rounded-md"
+                                value="#000000"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="font-size" class="block text-sm font-medium text-gray-700 mb-1">Font Size</label>
+                            <input 
+                                type="range" 
+                                id="font-size" 
+                                min="20" 
+                                max="80" 
+                                value="40" 
+                                class="w-full"
+                            >
+                            <div class="text-xs text-gray-500 flex justify-between">
+                                <span>Small</span>
+                                <span>Large</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="text-align" class="block text-sm font-medium text-gray-700 mb-1">Text Alignment</label>
+                            <div class="flex justify-between" id="text-align">
+                                <button type="button" data-align="left" class="text-align-btn py-2 px-4 border border-gray-300 rounded-md">
+                                    Left
+                                </button>
+                                <button type="button" data-align="center" class="text-align-btn py-2 px-4 border border-gray-300 rounded-md active">
+                                    Center
+                                </button>
+                                <button type="button" data-align="right" class="text-align-btn py-2 px-4 border border-gray-300 rounded-md">
+                                    Right
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6">
+                        <button 
+                            type="button" 
+                            id="generate-btn"
+                            class="w-full py-3 px-6 bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium rounded-md hover:opacity-90 transition-opacity"
+                        >
+                            Generate Quote Image
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Preview Section -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-bold mb-4">Preview</h2>
+                <div id="canvas-container" class="flex justify-center items-center bg-gray-200 rounded-md overflow-hidden" style="min-height: 400px;">
+                    <canvas id="quote-canvas" width="800" height="800"></canvas>
+                </div>
+                <div class="mt-6">
+                    <button 
+                        type="button" 
+                        id="download-btn"
+                        class="w-full py-3 px-6 bg-green-600 text-white font-medium rounded-md hover:opacity-90 transition-opacity disabled:bg-gray-400 disabled:cursor-not-allowed"
+                        disabled
+                    >
+                        Download Image
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Section (Optional) -->
+        <div class="mt-12 bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-4">Your Gallery</h2>
+            <p class="text-gray-500 text-center" id="empty-gallery-message">Your created quotes will appear here</p>
+            <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+                <!-- Gallery items will be inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-6 mt-12">
+        <div class="container mx-auto text-center">
+            <p>Quotify - Create beautiful quote images instantly</p>
+        </div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

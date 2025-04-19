@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SplitEZ - Phân chia chi phí nhóm đơn giản</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Floating decorative elements -->
+    <div class="floating-decoration decoration-1"></div>
+    <div class="floating-decoration decoration-2"></div>
+
+    <div class="container">
+        <button class="theme-switcher" id="theme-switcher" aria-label="Chuyển đổi giao diện sáng/tối">
+            <i class="fas fa-moon"></i>
+        </button>
+        
+        <header>
+            <h1 class="tilt-card"><i class="fas fa-money-bill-wave"></i> SplitEZ</h1>
+            <p>Phân chia chi phí nhóm một cách công bằng và dễ dàng</p>
+        </header>
+
+        <main>
+            <section class="section participants-section">
+                <h2><i class="fas fa-users"></i> Thành viên nhóm</h2>
+                <div class="participant-inputs">
+                    <input type="text" id="new-participant" placeholder="Nhập tên thành viên..." autocomplete="off">
+                    <button id="add-participant" class="btn-primary">
+                        <i class="fas fa-user-plus"></i> Thêm
+                    </button>
+                </div>
+                <ul id="participants-list" class="participants-list">
+                    <!-- Danh sách thành viên sẽ được thêm vào đây bằng JavaScript -->
+                </ul>
+            </section>
+
+            <section class="section expenses-section">
+                <h2><i class="fas fa-receipt"></i> Chi phí</h2>
+                <div class="expense-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="payer"><i class="fas fa-user"></i> Người trả tiền</label>
+                            <select id="payer" required>
+                                <option value="" disabled selected>Chọn người trả</option>
+                                <!-- Options will be populated by JavaScript -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="amount"><i class="fas fa-coins"></i> Số tiền</label>
+                            <input type="number" id="amount" min="0" step="1000" placeholder="VD: 100.000 VNĐ" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="description"><i class="fas fa-tag"></i> Mô tả (không bắt buộc)</label>
+                            <input type="text" id="description" placeholder="VD: Tiền ăn trưa, tiền xăng...">
+                        </div>
+                        <div class="form-group button-group">
+                            <button id="add-expense" class="btn-primary"><i class="fas fa-plus-circle"></i> Thêm chi phí</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="expenses-list-container">
+                    <h3><i class="fas fa-list-ul"></i> Danh sách các khoản chi</h3>
+                    <table class="expenses-table">
+                        <thead>
+                            <tr>
+                                <th>Người trả</th>
+                                <th>Số tiền</th>
+                                <th>Mô tả</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody id="expenses-table-body">
+                            <!-- Expense items will be added here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="section calculation-section">
+                <button id="calculate-btn" class="btn-success btn-large pulse">
+                    <i class="fas fa-calculator"></i> Tính toán kết quả
+                </button>
+            </section>
+
+            <section class="section results-section" id="results-section">
+                <h2><i class="fas fa-chart-pie"></i> Kết quả</h2>
+                <div class="results-container">
+                    <div class="summary-section tilt-card">
+                        <h3><i class="fas fa-info-circle"></i> Tóm tắt</h3>
+                        <div id="summary-content">
+                            <!-- Summary will be added here by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="settlements-section tilt-card">
+                        <h3><i class="fas fa-exchange-alt"></i> Đề xuất thanh toán</h3>
+                        <ul id="settlements-list">
+                            <!-- Settlement items will be added here by JavaScript -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="tooltip">
+                    <button id="reset-btn" class="btn-warning"><i class="fas fa-redo"></i> Đặt lại</button>
+                    <span class="tooltip-text">Đặt lại toàn bộ dữ liệu và bắt đầu một phân chia chi phí mới</span>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 SplitEZ - Công cụ phân chia chi phí nhóm | <i class="fas fa-code"></i> với <i class="fas fa-heart" style="color: #ef4444;"></i></p>
+        </footer>
+    </div>
+
+    <script src="./utils.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

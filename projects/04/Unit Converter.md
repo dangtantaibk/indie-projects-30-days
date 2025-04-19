@@ -1,83 +1,85 @@
-# 🧠 GitHub Copilot Instructions for Quotify - Quote Image Generator
+# 🧠 GitHub Copilot Instructions for Unit Converter Web App
 
 ## 📌 Project Overview
-**Quotify** is a simple web application that allows users to input a short quote or message and instantly generate a visually appealing image containing that quote. The tool supports basic customization like choosing a background image, font style, and layout, making it ideal for fast, no-design-needed social media content.
+**Unit Converter** is a simple and intuitive web application that helps users convert between common measurement units. It supports conversions such as length, weight, temperature, and currency, and is designed for speed and accessibility in daily life use-cases like cooking, studying, travel, and engineering.
 
 ## 🛠️ Key Features
-- Input quote text via simple UI
-- Select background style (preset image or color)
-- Choose font, text color, alignment
-- Generate quote image using HTML5 Canvas or Fabric.js
-- Download the image locally
-- Optional: show gallery of user-created images (client-side only)
+- Convert between standard units (length, weight, temperature, currency, etc.)
+- Real-time input/output updates
+- Dropdown selectors for source and target units
+- Mobile-friendly interface
+- Monetization via ads or a premium version with extra features
 
 ## 🧭 Copilot Instructions
-Use these instructions to align Copilot behavior with Quotify’s design goals:
+Use these guidelines to align Copilot behavior during development:
 
-### 🔹 Quote Input & UI Controls
+### 🔹 Basic Conversion Logic
 ```plaintext
-Create a form with a textarea for the quote and controls (dropdowns/buttons) for selecting background, font, font size, text alignment, and color.
+Implement modular conversion functions for each category (length, weight, temperature, currency). Ensure accurate conversion formulas.
 ```
 
-### 🔹 Canvas or Image Rendering
+### 🔹 Unit Selection UI
 ```plaintext
-Use HTML5 Canvas or Fabric.js to render the quote text onto a selected background image or color. Make sure text wraps properly and is centered or aligned as chosen.
+Create two dropdowns: one for the source unit and one for the target unit. Allow dynamic updates based on selected category (e.g., switching from length to temperature).
 ```
 
-### 🔹 Font & Style Options
+### 🔹 Input/Output Fields
 ```plaintext
-Offer a few curated font choices (e.g., serif, sans-serif, script) and allow font size and color to be selected. Use Google Fonts for variety.
+Use an input field for user-entered value and dynamically show the result in a read-only output field. Update result in real-time.
 ```
 
-### 🔹 Background Handling
+### 🔹 Category Tabs or Dropdown
 ```plaintext
-Provide a set of preloaded background images or allow the user to select a flat color. Backgrounds should be scaled to canvas size.
+Provide tabs or a dropdown to select conversion category (Length, Weight, Temperature, Currency). Update units shown accordingly.
 ```
 
-### 🔹 Image Export
+### 🔹 Currency API (Optional)
 ```plaintext
-Add a 'Download Image' button that triggers Canvas’s `.toDataURL()` or `.toBlob()` and downloads the image as PNG.
+For currency conversion, fetch real-time exchange rates using a public API (e.g., exchangerate.host or Open Exchange Rates).
 ```
 
-### 🔹 Monetization Options (Optional)
+### 🔹 Monetization Options
 ```plaintext
-Offer a "Pro" mode with premium backgrounds, advanced styling (shadows, gradients), or watermark-free downloads.
+Free version includes ads and basic unit sets. Pro version removes ads and adds rare unit types (e.g., nautical miles, micrograms, Kelvin).
 ```
 
-### 🔹 Responsiveness & UX
+### 🔹 Error Handling
 ```plaintext
-Ensure the layout works well on both desktop and mobile. Use Tailwind CSS or minimal custom styling for a polished but lightweight UI.
+Validate input (numeric only), handle API failure gracefully, and provide error messages for invalid conversions.
 ```
 
 ## 🧪 Example UI Flow
-1. User enters quote in a textarea
-2. Selects background, font, color, alignment
-3. Clicks “Generate” → Image preview rendered
-4. Clicks “Download” → PNG downloaded to device
+1. User selects category: e.g., Temperature
+2. Chooses source unit: Celsius → target unit: Fahrenheit
+3. Enters value → output updates instantly with result
+4. Clicks [Copy Result] or [Clear]
 
-## ✅ Suggested Libraries
-- Canvas rendering: `HTML5 Canvas API`, `Fabric.js`
-- Fonts: `Google Fonts`
-- UI Styling: `Tailwind CSS`
+## ✅ Suggested Libraries & Tools
+- UI Styling: Tailwind CSS or Bootstrap
+- Currency API: `exchangerate.host`, `fixer.io`
+- Framework (optional): React or plain Vanilla JS
 
 ## 📁 Suggested Project Structure
 ```bash
 / (root)
 ├── public/
-│   └── backgrounds/
+│   └── index.html
 ├── src/
-│   ├── index.html
-│   ├── styles.css
+│   ├── converters/ (modular conversion logic)
+│   ├── ui.js
 │   └── main.js
+├── styles/
+│   └── styles.css
 ├── README.md
 ├── LICENSE
 └── package.json
 ```
 
 ## 🔗 Future Enhancements
-- Enable user to upload custom background images
-- Save and share quote templates via browser localStorage or backend
-- Social sharing buttons (Twitter, Instagram, LinkedIn)
+- Add copy-to-clipboard and reset buttons
+- Add accessibility improvements (ARIA labels, keyboard navigation)
+- Store recent conversions in localStorage
+- Support localization (multi-language UI)
 
 ---
-This instruction set is designed to keep GitHub Copilot on track during the development of Quotify – ensuring simplicity, visual quality, and fast user interaction.
+This instruction file keeps GitHub Copilot aligned with building a simple yet powerful Unit Converter web app, suitable for everyday use.

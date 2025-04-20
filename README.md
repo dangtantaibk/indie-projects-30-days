@@ -12,8 +12,8 @@ Welcome to my **30-Day Indie Projects Challenge**, where each day I build and la
 | 02  | Gistify CLI & Daily Habit Tracker | Python, GitHub API | Simple |  ✅ Done |
 | 03  | Quotify & Markdown to HTML | JavaScript | Simple | ✅ Done |
 | 04  | SplitEZ & Basic Unit Converter | React | Simple | ✅ Done |
-| 05  | PantryChef & Random Quote Generator | React, Node.js | Simple | ⏳ Upcoming |
-| 06  | FlashGuru & QR Code Generator | JavaScript | Simple | ⏳ Upcoming |
+| 05  | PantryChef & Random Quote Generator | React, Node.js | Simple | ✅ Done  |
+| 06  | FlashGuru & QR Code Generator | JavaScript | Simple | ✅ Done |
 | 07  | HashtagGenie & Topic Flashcards | React | Simple | ⏳ Upcoming |
 | 08  | SnippetHub & Simple Project Manager | MERN Stack | Medium | ⏳ Upcoming |
 | 09  | HabitWise & Recipe Suggester | React, Node.js | Medium | ⏳ Upcoming |

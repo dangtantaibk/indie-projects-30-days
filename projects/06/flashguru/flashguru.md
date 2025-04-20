@@ -6,7 +6,7 @@
 ## 🛠️ Key Features
 - Create flashcards with term–definition or question–answer pairs
 - Flip cards on click/tap for interactive self-testing
-- Mark cards as “learned” to track progress
+- Mark cards as "learned" to track progress
 - Support for multiple decks
 - Store data in browser (localStorage) or sync via backend (optional)
 
@@ -25,7 +25,7 @@ Render flashcards one by one or in a list/grid. Clicking a card should flip it t
 
 ### 🔹 Progress Tracking
 ```plaintext
-Add a checkbox or button on each card to mark it as “learned.” Optionally display statistics (e.g., 3/10 learned).
+Add a checkbox or button on each card to mark it as "learned." Optionally display statistics (e.g., 3/10 learned).
 ```
 
 ### 🔹 Deck Management (Optional)
@@ -40,7 +40,7 @@ Use browser `localStorage` to persist flashcard data. Optionally allow users to 
 
 ### 🔹 UI & UX
 ```plaintext
-Use React or Vue for smooth interaction. Ensure mobile responsiveness. Provide a clean, focused layout with minimal distractions.
+Use Next.js for smooth interaction and routing. Ensure mobile responsiveness. Provide a clean, focused layout with minimal distractions.
 ```
 
 ### 🔹 Monetization (Optional)
@@ -55,27 +55,34 @@ Validate input for empty fields or duplicate entries. Alert users when data is m
 
 ## 🧪 Example User Flow
 1. User enters:
-   - Term: “HTTP” → Definition: “HyperText Transfer Protocol”
-   - Term: “OOP” → Definition: “Object-Oriented Programming”
+   - Term: "HTTP" → Definition: "HyperText Transfer Protocol"
+   - Term: "OOP" → Definition: "Object-Oriented Programming"
 2. User clicks [Start Review]
 3. Flashcards appear one-by-one; user flips each and marks known cards
-4. At the end, summary: “You mastered 7/10 cards.”
+4. At the end, summary: "You mastered 7/10 cards."
 
 ## ✅ Suggested Tech Stack
-- Frontend: React + Tailwind CSS or Vue 3 + Vite
+- Frontend: Next.js + Tailwind CSS
 - Persistence: localStorage (MVP), Firebase/Supabase (optional)
 
 ## 📁 Suggested Project Structure
 ```bash
 / (root)
 ├── public/
-│   └── index.html
+│   └── favicon.ico
 ├── src/
-│   ├── components/Flashcard.vue or Flashcard.jsx
-│   ├── components/DeckManager.vue
-│   └── App.vue or App.jsx
-├── styles/
-│   └── main.css
+│   ├── app/
+│   │   ├── page.js
+│   │   └── layout.js
+│   ├── components/
+│   │   ├── Flashcard.js
+│   │   ├── DeckManager.js
+│   │   └── FlashcardInput.js
+│   ├── lib/
+│   │   └── localStorage.js
+│   └── styles/
+│       └── globals.css
+├── next.config.js
 ├── README.md
 ├── LICENSE
 └── package.json
@@ -86,6 +93,8 @@ Validate input for empty fields or duplicate entries. Alert users when data is m
 - Import/Export decks to share with classmates
 - Cloud sync with authentication
 - Flashcard quiz mode (multiple choice)
+- API routes for storing flashcards in database (Next.js benefit)
+- Server components for improved performance (Next.js benefit)
 
 ---
 Use this Copilot instruction file to keep development for **FlashGuru** focused on speed, usability, and personal learning customization.

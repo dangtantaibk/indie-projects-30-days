@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter | Chuyển đổi đơn vị</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1 class="animate__animated animate__fadeIn">
+                <i class="fas fa-exchange-alt animate__animated animate__flip"></i>
+                Unit Converter
+            </h1>
+            <p class="tagline animate__animated animate__fadeIn animate__delay-1s">Chuyển đổi đơn vị đo lường nhanh chóng và chính xác</p>
+        </header>
+
+        <main class="converter-section animate__animated animate__fadeIn animate__delay-1s">
+            <div class="category-selector">
+                <button data-category="length" class="active animate__animated animate__fadeIn"><i class="fas fa-ruler"></i> Chiều dài</button>
+                <button data-category="weight" class="animate__animated animate__fadeIn animate__delay-1s"><i class="fas fa-weight-hanging"></i> Khối lượng</button>
+                <button data-category="temperature" class="animate__animated animate__fadeIn animate__delay-2s"><i class="fas fa-temperature-high"></i> Nhiệt độ</button>
+                <button data-category="currency" class="animate__animated animate__fadeIn animate__delay-3s"><i class="fas fa-coins"></i> Tiền tệ</button>
+            </div>
+
+            <div class="converter-container animate__animated animate__fadeIn">
+                <div class="input-group">
+                    <div class="input-wrapper" data-label="Giá trị nguồn">
+                        <input type="number" id="sourceValue" placeholder="0" class="converter-input">
+                        <select id="sourceUnit" class="unit-selector"></select>
+                    </div>
+                    
+                    <button id="swapButton" class="swap-button" title="Hoán đổi đơn vị">
+                        <i class="fas fa-exchange-alt"></i>
+                    </button>
+                    
+                    <div class="input-wrapper" data-label="Giá trị đích">
+                        <input type="number" id="targetValue" readonly class="converter-input result">
+                        <select id="targetUnit" class="unit-selector"></select>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="copyButton" class="action-button copy">
+                        <i class="fas fa-copy"></i> Sao chép kết quả
+                    </button>
+                    <button id="clearButton" class="action-button clear">
+                        <i class="fas fa-trash-alt"></i> Xóa
+                    </button>
+                </div>
+
+                <div id="formulaDisplay" class="formula-display">
+                    <span class="formula-label">Công thức:</span>
+                    <span id="formula" class="shimmer"></span>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <h3><i class="fas fa-history"></i> Lịch sử chuyển đổi</h3>
+                <ul id="historyList" class="history-list"></ul>
+                <button id="clearHistoryButton" class="clear-history-button">
+                    <i class="fas fa-trash"></i> Xóa lịch sử
+                </button>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>&copy; 2025 Unit Converter | <a href="#" id="openPremium">Nâng cấp lên phiên bản Premium</a></p>
+        </footer>
+
+        <div id="premiumModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Nâng cấp lên phiên bản Premium</h2>
+                <ul class="premium-features">
+                    <li><i class="fas fa-check"></i> Loại bỏ quảng cáo</li>
+                    <li><i class="fas fa-check"></i> Thêm các đơn vị chuyên biệt</li>
+                    <li><i class="fas fa-check"></i> Xuất lịch sử chuyển đổi</li>
+                    <li><i class="fas fa-check"></i> Hỗ trợ đổi giao diện tối/sáng</li>
+                </ul>
+                <button class="premium-button">
+                    <span>Nâng cấp ngay</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files với đường dẫn chính xác -->
+    <script src="./length.js"></script>
+    <script src="./weight.js"></script>
+    <script src="./temperature.js"></script>
+    <script src="./currency.js"></script>
+    <script src="./ui.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

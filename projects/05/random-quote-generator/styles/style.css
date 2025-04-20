@@ -1,0 +1,72 @@
+/* Custom animations and styles for Random Quote Generator */
+
+/* Quote text animations */
+#quote-text, #quote-author {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+/* Quote container styling */
+#quote-container {
+    position: relative;
+}
+
+#quote-text {
+    line-height: 1.6;
+    font-size: 1.5rem;
+    position: relative;
+    padding: 0 1rem;
+}
+
+/* Fancy quote marks */
+#quote-text::before,
+#quote-text::after {
+    font-size: 2rem;
+    color: #6366f1;
+    font-weight: bold;
+}
+
+/* Button effects */
+button {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Social share buttons hover effects */
+.social-share a {
+    transition: transform 0.2s ease;
+}
+
+.social-share a:hover {
+    transform: scale(1.2);
+}
+
+/* Card effects */
+.container > div {
+    backdrop-filter: blur(10px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    #quote-text {
+        font-size: 1.25rem;
+    }
+    
+    .container > div {
+        margin: 0 1rem;
+        padding: 1.5rem;
+    }
+}

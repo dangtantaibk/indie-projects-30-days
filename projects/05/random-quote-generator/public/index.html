@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-indigo-500 to-purple-600 min-h-screen flex flex-col items-center justify-center">
+    <div class="container mx-auto px-4">
+        <div class="max-w-xl mx-auto bg-white bg-opacity-90 rounded-lg shadow-lg p-8 transform transition-all duration-300 hover:shadow-2xl">
+            <header class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-indigo-700">Random Quote Generator</h1>
+            </header>
+
+            <div class="mb-8">
+                <div class="category-filter text-center mb-6">
+                    <label for="category-select" class="mr-2 text-gray-700">Filter by Category:</label>
+                    <select id="category-select" class="px-4 py-2 rounded-md bg-indigo-100 text-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <option value="all">All Categories</option>
+                        <option value="motivation">Motivation</option>
+                        <option value="wisdom">Wisdom</option>
+                        <option value="humor">Humor</option>
+                        <option value="creativity">Creativity</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="quote-container" class="mb-8 text-center">
+                <blockquote class="text-xl italic text-gray-800 mb-4">
+                    <p id="quote-text" class="before:content-['\201C'] after:content-['\201D']"></p>
+                </blockquote>
+                <cite id="quote-author" class="block text-right text-gray-600 font-semibold"></cite>
+            </div>
+
+            <div class="flex justify-center gap-4 mb-8">
+                <button id="new-quote-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-full transition-colors">
+                    New Quote
+                </button>
+                <button id="copy-quote-btn" class="bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-6 rounded-full transition-colors">
+                    <i class="far fa-copy mr-1"></i> Copy
+                </button>
+            </div>
+
+            <div class="social-share flex justify-center gap-4">
+                <a id="twitter-share" href="#" target="_blank" class="text-blue-500 hover:text-blue-700 text-2xl">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a id="linkedin-share" href="#" target="_blank" class="text-blue-700 hover:text-blue-900 text-2xl">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        
+        <footer class="mt-8 text-center text-white">
+            <p>Created with ❤️ for learning purposes</p>
+            <p class="mt-2">
+                <a href="https://github.com/yourusername" class="underline hover:text-indigo-200">Check out my other projects</a>
+            </p>
+        </footer>
+    </div>
+    
+    <script src="../src/main.js" type="module"></script>
+</body>
+</html>

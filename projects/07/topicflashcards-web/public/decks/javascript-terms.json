@@ -1,0 +1,78 @@
+{
+  "topicId": "javascript-terms",
+  "name": "JavaScript Terms",
+  "description": "Essential JavaScript concepts and terminology for developers",
+  "isPremium": false,
+  "cards": [
+    {
+      "id": "js-001",
+      "front": "Closure",
+      "back": "A function that has access to variables in its outer (enclosing) function's scope chain, even after the outer function has returned.",
+      "topicTag": "javascript-terms",
+      "learned": false
+    },
+    {
+      "id": "js-002",
+      "front": "Hoisting",
+      "back": "JavaScript's default behavior of moving declarations to the top of the current scope before code execution.",
+      "topicTag": "javascript-terms",
+      "learned": false
+    },
+    {
+      "id": "js-003",
+      "front": "Prototypal Inheritance",
+      "back": "The mechanism by which JavaScript objects inherit features from one another.",
+      "topicTag": "javascript-terms",
+      "learned": false
+    },
+    {
+      "id": "js-004",
+      "front": "Event Bubbling",
+      "back": "A sequence of calling the event handlers from the innermost element to the outermost element.",
+      "topicTag": "javascript-terms",
+      "learned": false
+    },
+    {
+      "id": "js-005",
+      "front": "Promises",
+      "back": "Objects representing the eventual completion or failure of an asynchronous operation and its resulting value.",
+      "topicTag": "javascript-terms",
+      "learned": false
+    },
+    {
+      "id": "js-006",
+      "front": "Async/Await",
+      "back": "Syntactic sugar built on top of promises, making asynchronous code look more like synchronous code.",
+      "topicTag": "javascript-terms",
+      "learned": false
+    },
+    {
+      "id": "js-007",
+      "front": "Destructuring",
+      "back": "A JavaScript expression that allows you to extract data from arrays or objects into distinct variables.",
+      "topicTag": "javascript-terms",
+      "learned": false
+    },
+    {
+      "id": "js-008",
+      "front": "Event Loop",
+      "back": "A programming construct that waits for and dispatches events in a program.",
+      "topicTag": "javascript-terms",
+      "learned": false
+    },
+    {
+      "id": "js-009",
+      "front": "Callback Hell",
+      "back": "A situation where callbacks are nested within other callbacks several levels deep, making code hard to read and maintain.",
+      "topicTag": "javascript-terms",
+      "learned": false
+    },
+    {
+      "id": "js-010",
+      "front": "Spread Operator",
+      "back": "An operator that allows an iterable to be expanded in places where zero or more arguments or elements are expected.",
+      "topicTag": "javascript-terms",
+      "learned": false
+    }
+  ]
+}

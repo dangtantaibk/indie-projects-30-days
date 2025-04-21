@@ -14,7 +14,7 @@ Welcome to my **30-Day Indie Projects Challenge**, where each day I build and la
 | 04  | SplitEZ & Basic Unit Converter | React | Simple | ✅ Done |
 | 05  | PantryChef & Random Quote Generator | React, Node.js | Simple | ✅ Done  |
 | 06  | FlashGuru & QR Code Generator | JavaScript | Simple | ✅ Done |
-| 07  | HashtagGenie & Topic Flashcards | React | Simple | ⏳ Upcoming |
+| 07  | HashtagGenie & Topic Flashcards | React | Simple | ✅ Done |
 | 08  | SnippetHub & Simple Project Manager | MERN Stack | Medium | ⏳ Upcoming |
 | 09  | HabitWise & Recipe Suggester | React, Node.js | Medium | ⏳ Upcoming |
 | 10  | SummarizeWise & Simple Landing Page Builder | React | Medium | ⏳ Upcoming |

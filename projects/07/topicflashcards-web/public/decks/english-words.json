@@ -1,0 +1,78 @@
+{
+  "topicId": "english-words",
+  "name": "Top 100 English Words",
+  "description": "Learn the most common English words to improve your vocabulary",
+  "isPremium": false,
+  "cards": [
+    {
+      "id": "en-001",
+      "front": "Ubiquitous",
+      "back": "Present, appearing, or found everywhere.",
+      "topicTag": "english-words",
+      "learned": false
+    },
+    {
+      "id": "en-002",
+      "front": "Ephemeral",
+      "back": "Lasting for a very short time.",
+      "topicTag": "english-words",
+      "learned": false
+    },
+    {
+      "id": "en-003",
+      "front": "Serendipity",
+      "back": "The occurrence and development of events by chance in a happy or beneficial way.",
+      "topicTag": "english-words",
+      "learned": false
+    },
+    {
+      "id": "en-004",
+      "front": "Eloquent",
+      "back": "Fluent or persuasive in speaking or writing.",
+      "topicTag": "english-words",
+      "learned": false
+    },
+    {
+      "id": "en-005",
+      "front": "Resilient",
+      "back": "Able to withstand or recover quickly from difficult conditions.",
+      "topicTag": "english-words",
+      "learned": false
+    },
+    {
+      "id": "en-006",
+      "front": "Paradigm",
+      "back": "A typical example or pattern of something; a model.",
+      "topicTag": "english-words",
+      "learned": false
+    },
+    {
+      "id": "en-007",
+      "front": "Pragmatic",
+      "back": "Dealing with things sensibly and realistically in a way that is based on practical considerations.",
+      "topicTag": "english-words",
+      "learned": false
+    },
+    {
+      "id": "en-008",
+      "front": "Arbitrary",
+      "back": "Based on random choice or personal whim, rather than any reason or system.",
+      "topicTag": "english-words",
+      "learned": false
+    },
+    {
+      "id": "en-009",
+      "front": "Meticulous",
+      "back": "Showing great attention to detail; very careful and precise.",
+      "topicTag": "english-words",
+      "learned": false
+    },
+    {
+      "id": "en-010",
+      "front": "Juxtaposition",
+      "back": "The fact of two things being seen or placed close together with contrasting effect.",
+      "topicTag": "english-words",
+      "learned": false
+    }
+  ]
+}

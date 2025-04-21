@@ -1,0 +1,88 @@
+{
+  "categories": {
+    "fitness": [
+      {"tag": "fitness", "popularity": 92},
+      {"tag": "workout", "popularity": 87},
+      {"tag": "fitlife", "popularity": 73},
+      {"tag": "gym", "popularity": 85},
+      {"tag": "healthylifestyle", "popularity": 76},
+      {"tag": "training", "popularity": 68},
+      {"tag": "motivation", "popularity": 81},
+      {"tag": "fitspo", "popularity": 65},
+      {"tag": "fitnessmotivation", "popularity": 79},
+      {"tag": "health", "popularity": 83}
+    ],
+    "travel": [
+      {"tag": "travel", "popularity": 94},
+      {"tag": "wanderlust", "popularity": 85},
+      {"tag": "adventure", "popularity": 83},
+      {"tag": "travelphotography", "popularity": 78},
+      {"tag": "nature", "popularity": 88},
+      {"tag": "explore", "popularity": 76},
+      {"tag": "travelgram", "popularity": 82},
+      {"tag": "vacation", "popularity": 80},
+      {"tag": "instatravel", "popularity": 74},
+      {"tag": "photography", "popularity": 89}
+    ],
+    "food": [
+      {"tag": "food", "popularity": 95},
+      {"tag": "foodie", "popularity": 87},
+      {"tag": "delicious", "popularity": 82},
+      {"tag": "foodphotography", "popularity": 78},
+      {"tag": "homemade", "popularity": 75},
+      {"tag": "yummy", "popularity": 80},
+      {"tag": "instafood", "popularity": 86},
+      {"tag": "healthyfood", "popularity": 77},
+      {"tag": "foodlover", "popularity": 73},
+      {"tag": "foodblogger", "popularity": 68}
+    ],
+    "technology": [
+      {"tag": "technology", "popularity": 90},
+      {"tag": "tech", "popularity": 85},
+      {"tag": "innovation", "popularity": 80},
+      {"tag": "programming", "popularity": 75},
+      {"tag": "coding", "popularity": 74},
+      {"tag": "developer", "popularity": 73},
+      {"tag": "engineering", "popularity": 70},
+      {"tag": "ai", "popularity": 88},
+      {"tag": "machinelearning", "popularity": 82},
+      {"tag": "future", "popularity": 76}
+    ],
+    "art": [
+      {"tag": "art", "popularity": 93},
+      {"tag": "artist", "popularity": 84},
+      {"tag": "artwork", "popularity": 78},
+      {"tag": "drawing", "popularity": 77},
+      {"tag": "digitalart", "popularity": 75},
+      {"tag": "illustration", "popularity": 80},
+      {"tag": "painting", "popularity": 82},
+      {"tag": "creative", "popularity": 78},
+      {"tag": "design", "popularity": 85},
+      {"tag": "sketch", "popularity": 72}
+    ],
+    "fashion": [
+      {"tag": "fashion", "popularity": 91},
+      {"tag": "style", "popularity": 86},
+      {"tag": "ootd", "popularity": 78},
+      {"tag": "fashionblogger", "popularity": 75},
+      {"tag": "streetstyle", "popularity": 77},
+      {"tag": "instafashion", "popularity": 82},
+      {"tag": "outfitoftheday", "popularity": 74},
+      {"tag": "fashionstyle", "popularity": 73},
+      {"tag": "trendy", "popularity": 79},
+      {"tag": "shopping", "popularity": 84}
+    ]
+  },
+  "trending": [
+    {"tag": "reels", "popularity": 96},
+    {"tag": "viral", "popularity": 95},
+    {"tag": "trending", "popularity": 94},
+    {"tag": "explorepage", "popularity": 92},
+    {"tag": "fyp", "popularity": 97},
+    {"tag": "foryoupage", "popularity": 93},
+    {"tag": "challenge", "popularity": 89},
+    {"tag": "trending2023", "popularity": 90},
+    {"tag": "viralpost", "popularity": 88},
+    {"tag": "tiktok", "popularity": 93}
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "topicId": "historical-events",
+  "name": "Major Historical Events",
+  "description": "Learn about key historical events that shaped our world",
+  "isPremium": true,
+  "cards": [
+    {
+      "id": "hist-001",
+      "front": "The Fall of the Berlin Wall",
+      "back": "November 9, 1989 - The physical barrier between East and West Berlin was opened, symbolically ending the Cold War.",
+      "topicTag": "historical-events",
+      "learned": false
+    },
+    {
+      "id": "hist-002",
+      "front": "Moon Landing",
+      "back": "July 20, 1969 - Neil Armstrong became the first human to step onto the lunar surface.",
+      "topicTag": "historical-events",
+      "learned": false
+    },
+    {
+      "id": "hist-003",
+      "front": "Invention of the World Wide Web",
+      "back": "1989 - Tim Berners-Lee invented the World Wide Web while at CERN, revolutionizing information sharing globally.",
+      "topicTag": "historical-events",
+      "learned": false
+    },
+    {
+      "id": "hist-004",
+      "front": "The Industrial Revolution",
+      "back": "Late 1700s to early 1800s - Transition to new manufacturing processes in Europe and the United States.",
+      "topicTag": "historical-events",
+      "learned": false
+    },
+    {
+      "id": "hist-005",
+      "front": "The Discovery of Penicillin",
+      "back": "1928 - Alexander Fleming discovered penicillin, the first true antibiotic, revolutionizing medicine.",
+      "topicTag": "historical-events",
+      "learned": false
+    },
+    {
+      "id": "hist-006",
+      "front": "The Printing Press",
+      "back": "Around 1440 - Johannes Gutenberg invented the movable-type printing press, enabling mass communication.",
+      "topicTag": "historical-events",
+      "learned": false
+    },
+    {
+      "id": "hist-007",
+      "front": "The American Declaration of Independence",
+      "back": "July 4, 1776 - The Continental Congress declared the thirteen American colonies as independent sovereign states.",
+      "topicTag": "historical-events",
+      "learned": false
+    },
+    {
+      "id": "hist-008",
+      "front": "The French Revolution",
+      "back": "1789-1799 - A period of radical social and political upheaval in France with impacts throughout Europe.",
+      "topicTag": "historical-events",
+      "learned": false
+    },
+    {
+      "id": "hist-009",
+      "front": "The End of World War II",
+      "back": "September 2, 1945 - Japan formally surrendered, ending the deadliest conflict in human history.",
+      "topicTag": "historical-events",
+      "learned": false
+    },
+    {
+      "id": "hist-010",
+      "front": "The Invention of the Telephone",
+      "back": "March 10, 1876 - Alexander Graham Bell made the first successful telephone call.",
+      "topicTag": "historical-events",
+      "learned": false
+    }
+  ]
+}
